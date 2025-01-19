@@ -262,6 +262,51 @@ export const APP_SPEC: AppSpec = {
         }
       },
       {
+Asset Transfer and Burn
+
+From Address: account1.addr
+
+To Address: TMINT_ADDRESS
+
+Asset Index: ASA_AVM1_ID
+
+Amount: amount
+
+Suggested Params: step1_axfer_sp
+
+Retrieve Message and Attestation
+
+Message Hash: messageHash
+
+Attestation URL: http://127.0.0.1:9000/attestation/${messageHash}
+
+Receive Funds
+
+From Address: account2.addr
+
+To Address: MTRAN2_ADDRESS
+
+Amount: 7300
+
+Suggested Params: step5_fee_sp
+
+Method: receiveMessage
+
+Method Args:
+
+{ txn: fees, signer: chain2Signer }
+
+new Uint8Array(Buffer.from(messageBody, 'hex'))
+
+signature
+
+App Accounts: appAccounts
+
+App Foreign Apps: appForeignApps
+
+App Foreign Assets: appForeignAssets
+
+Boxes: boxes
         "name": "arc55_mbrSigIncrease",
         "desc": "Calculate the minimum balance requirement for storing a signature",
         "readonly": true,
